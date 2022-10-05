@@ -94,9 +94,9 @@ for c in range(percent1 - dif):
     print(f'{o} |{listRR}')
     o-=10
 
-rate1 = f'{"  " * 2}{BLACK}{"  " * 3}{END}\n{"  "}{BLACK}{"  "}{END}{"  " * 3}{BLACK}{"  "}{END}\n{BLACK}{"  "}{END}{"  " * 2}{BLACK}{"  "}{END}{"  " * 2}{BLACK}{"  "}{END}\n{"  "}{BLACK}{"  "}{END}{"  " * 3}{BLACK}{"  "}{END}\n{"  " * 2}{BLACK}{"  " * 3}{END}'
-rate2 = f'\n{"  "}{BLACK}{"  " * 5}{END}\n{BLACK}{"  "}{END}{"  " * 2}{BLACK}{"  "}{END}{"  " * 2}{BLACK}{"  "}{END}\n{"  "}{BLACK}{"  " * 5}{END}'
-rate3 = f'\nn{BLACK}{"  " * 7}{END}'
+rate1 = f'{"   "* 2}{" "}{BLACK}{" "}{END}  {BLACK}{" "}{END}  {BLACK}{" "}{END}\n{"    "}{BLACK}{" "}{END} {BLACK}{"   " * 3}{END} {BLACK}{" "}{END}\n{" "}{BLACK}{" "}{END} {BLACK}{"   "}{END}{"   " * 3}{BLACK}{"   "}{END} {BLACK}{" "}{END}\n{BLACK}{"   "}{END}{"   " * 2}{BLACK}{"   "}{END}{"   " * 2}{BLACK}{"   "}{END}\n{"   "}{BLACK}{"   "}{END}{"   " * 3}{BLACK}{"   "}{END}\n{"   " * 2}{BLACK}{"   " * 3}{END}'
+rate2 = f'\n{"    "}{BLACK}{" "}{END}  {BLACK}{" "}{END}  {BLACK}{" "}{END}  {BLACK}{" "}{END}  {BLACK}{" "}{END}\n{" "}{BLACK}{" "}{END} {BLACK}{"   " * 5}{END} {BLACK}{" "}{END}\n{BLACK}{"   "}{END}{"   " * 2}{BLACK}{"   "}{END}{"   " * 2}{BLACK}{"   "}{END}\n{"   "}{BLACK}{"   " * 5}{END}'
+rate3 = f'\n\n {BLACK}{" "}{END}  {BLACK}{" "}{END}  {BLACK}{" "}{END}  {BLACK}{" "}{END}  {BLACK}{" "}{END}  {BLACK}{" "}{END}  {BLACK}{" "}{END}\n{BLACK}{"   " * 7}{END}'
 
 os.system("clear")
 for i in range(100):
