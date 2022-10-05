@@ -15,7 +15,7 @@ WHITE = esc(7)
 BLUE = esc(20)
 END = '\u001b[0m'
 
-#БЛОК - ФЛАГ
+# БЛОК - ФЛАГ
 
 for i in range(6):
     if i <= 2:
@@ -23,17 +23,17 @@ for i in range(6):
     else:
         print(f'{GREEN}{" " * 9}{RED}{" " * 18}{END}')
 
-#БЛОК - УЗОР
+# БЛОК - УЗОР
 
 pixel = f'{BLACK}{"  "}{END}'
 uzor0 = f'{"  " * 3}{pixel}'
-print(uzor0*100)
+print(uzor0 * 100)
 uzor1 = f'{pixel * 3}{"  "}'
-print(f'{"  " * 2}{uzor1*100}')
+print(f'{"  " * 2}{uzor1 * 100}')
 uzor2 = f'{pixel * 4}'
-print(f'{"  "}{pixel}{uzor2*100}')
-print(f'{"  " * 2}{uzor1*100}')
-print(uzor0*100)
+print(f'{"  "}{pixel}{uzor2 * 100}')
+print(f'{"  " * 2}{uzor1 * 100}')
+print(uzor0 * 100)
 
 # БЛОК - ГРАФИК
 
@@ -54,29 +54,29 @@ count1 = 0
 count2 = 0
 a = 0
 with open('books.csv', 'r', encoding='windows-1251') as csvfile:
-    table = csv.reader(csvfile, delimiter = ';')
+    table = csv.reader(csvfile, delimiter=';')
     for row in table:
         if a != 0:
             if float(row[7]) <= 150.0:
-                count1+=1
+                count1 += 1
             else:
-                count2+=1
-        a+=1
-percent1 = round((count1/(count2+count1))*100)
-percent2 = round((count2/(count2+count1))*100)
+                count2 += 1
+        a += 1
+percent1 = round((count1 / (count2 + count1)) * 100)
+percent2 = round((count2 / (count2 + count1)) * 100)
 
-if percent1%10>=5:
-    percent1+=10-percent1%10
+if percent1 % 10 >= 5:
+    percent1 += 10 - percent1 % 10
 else:
-    percent1-=percent1%10
-if percent2%10>=5:
-    percent2+=10-percent2%10
+    percent1 -= percent1 % 10
+if percent2 % 10 >= 5:
+    percent2 += 10 - percent2 % 10
 else:
-    percent2-=percent2%10
+    percent2 -= percent2 % 10
 percent1 //= 10
 percent2 //= 10
 
-dif = abs(percent1-percent2)
+dif = abs(percent1 - percent2)
 listWW = f'{WHITE}{"  " * 5}{END}'
 listRW = f'{WHITE}{"  "}{END}{RED}{"  "}{END}{WHITE}{"  " * 3}{END}'
 listWR = f'{WHITE}{"  " * 3}{END}{RED}{"  "}{END}{WHITE}{"  "}'
@@ -88,15 +88,15 @@ for a in range(10 - percent1):
         print(f'{o}|{listWW}')
     else:
         print(f'{o} |{listWW}')
-    o-=10
+    o -= 10
 for b in range(dif):
     print(f'{o} |{listRW}')
-    o-=10
+    o -= 10
 for c in range(percent1 - dif):
     print(f'{o} |{listRR}')
-    o-=10
+    o -= 10
 
-rate1 = f'{"   "* 2}{" "}{BLACK}{" "}{END}  {BLACK}{" "}{END}  {BLACK}{" "}{END}\n{"    "}{BLACK}{" "}{END} {BLACK}{"   " * 3}{END} {BLACK}{" "}{END}\n{" "}{BLACK}{" "}{END} {BLACK}{"   "}{END}{"   " * 3}{BLACK}{"   "}{END} {BLACK}{" "}{END}\n{BLACK}{"   "}{END}{"   " * 2}{BLUE}{"   "}{END}{"   " * 2}{BLACK}{"   "}{END}\n{"   "}{BLACK}{"   "}{END}{"   " * 3}{BLACK}{"   "}{END}\n{"   " * 2}{BLACK}{"   " * 3}{END}'
+rate1 = f'{"   " * 2}{" "}{BLACK}{" "}{END}  {BLACK}{" "}{END}  {BLACK}{" "}{END}\n{"    "}{BLACK}{" "}{END} {BLACK}{"   " * 3}{END} {BLACK}{" "}{END}\n{" "}{BLACK}{" "}{END} {BLACK}{"   "}{END}{"   " * 3}{BLACK}{"   "}{END} {BLACK}{" "}{END}\n{BLACK}{"   "}{END}{"   " * 2}{BLUE}{"   "}{END}{"   " * 2}{BLACK}{"   "}{END}\n{"   "}{BLACK}{"   "}{END}{"   " * 3}{BLACK}{"   "}{END}\n{"   " * 2}{BLACK}{"   " * 3}{END}'
 rate2 = f'\n{"    "}{BLACK}{" "}{END}  {BLACK}{" "}{END}  {BLACK}{" "}{END}  {BLACK}{" "}{END}  {BLACK}{" "}{END}\n{" "}{BLACK}{" "}{END} {BLACK}{"   " * 5}{END} {BLACK}{" "}{END}\n{BLACK}{"   "}{END}{"   " * 2}{BLUE}{"   "}{END}{"   " * 2}{BLACK}{"   "}{END}\n{"   "}{BLACK}{"   " * 5}{END}'
 rate3 = f'\n\n    {BLACK}{" "}{END}  {BLACK}{" "}{END}  {BLACK}{" "}{END}  {BLACK}{" "}{END}  {BLACK}{" "}{END}\n{BLACK}{"   " * 7}{END}'
 
