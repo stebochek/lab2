@@ -95,8 +95,8 @@ for c in range(percent1 - dif):
     o-=10
 
 rate1 = f'{"  " * 2}{BLACK}{"  " * 3}{END}\n{"  "}{BLACK}{"  "}{END}{"  " * 3}{BLACK}{"  "}{END}\n{BLACK}{"  "}{END}{"  " * 2}{BLACK}{"  "}{END}{"  " * 2}{BLACK}{"  "}{END}\n{"  "}{BLACK}{"  "}{END}{"  " * 3}{BLACK}{"  "}{END}\n{"  " * 2}{BLACK}{"  " * 3}{END}'
-rate2 = f'{"  "}{BLACK}{"  " * 5}{END}\n{BLACK}{"  "}{END}{"  " * 2}{BLACK}{"  "}{END}{"  " * 2}{BLACK}{"  "}{END}\n{"  "}{BLACK}{"  " * 5}{END}'
-rate3 = f'{BLACK}{"  " * 7}{END}'
+rate2 = f'\n{"  "}{BLACK}{"  " * 5}{END}\n{BLACK}{"  "}{END}{"  " * 2}{BLACK}{"  "}{END}{"  " * 2}{BLACK}{"  "}{END}\n{"  "}{BLACK}{"  " * 5}{END}'
+rate3 = f'\nn{BLACK}{"  " * 7}{END}'
 
 os.system("clear")
 for i in range(100):
